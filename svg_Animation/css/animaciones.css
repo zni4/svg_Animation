@@ -1,0 +1,36 @@
+.contenedor {
+    transform: translate(50%, 50%);
+}
+
+#ipad:hover {
+    cursor: pointer;
+}
+
+.animar {
+    animation: rotate 1.5s ease forwards;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateZ(0deg) scale(1.0);
+
+    }
+
+    100% {
+        transform: rotateZ(-90deg) scale(10.0) translate(35%,0%);
+    }
+}
+
+.des_animar {
+    animation: unrotate 1.5s ease forwards;
+}
+
+@keyframes unrotate {
+    0% {
+        transform: rotateZ(-90deg) scale(10.0) translate(35%,0%);
+    }
+
+    100% {
+        transform: rotateZ(0deg) scale(1.0);
+    }
+}
