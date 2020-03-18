@@ -19,3 +19,27 @@ function animar() {
 		document.getElementById('textoiPad').classList.remove('desanimar_texto');
 	}
 }
+
+function animar_notebook() {
+	if (document.getElementById('hoja_izda').classList.contains('abrir')) {
+		document.getElementById('hoja_izda').classList.add('cerrar');
+		document.getElementById('hoja_izda').classList.remove('abrir');
+
+		document
+			.getElementById('notebook_svg')
+			.classList.add('desanimar_notebook_svg');
+		document
+			.getElementById('notebook_svg')
+			.classList.remove('animar_notebook_svg');
+	} else {
+		document.getElementById('hoja_izda').classList.add('abrir');
+		document.getElementById('hoja_izda').classList.remove('cerrar');
+
+		document
+			.getElementById('notebook_svg')
+			.classList.add('animar_notebook_svg');
+		document
+			.getElementById('notebook_svg')
+			.classList.remove('desanimar_notebook_svg');
+	}
+}

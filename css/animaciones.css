@@ -1,9 +1,12 @@
 .contenedor {
-	transform: translateY(150%);
+	transform: translateY(20%);
 	text-align: center;
+	padding-top: 250px;
+	padding-bottom: 200px;
 }
 
-#ipad:hover {
+#ipad:hover,
+#notebook_svg:hover {
 	cursor: pointer;
 }
 
@@ -81,5 +84,71 @@
 	}
 	to {
 		opacity: 1;
+	}
+}
+
+#hoja_izda {
+	transform: rotateY(180deg);
+	transform-origin: center;
+	visibility: hidden;
+}
+
+.abrir {
+	animation: abrir 0.5s linear forwards;
+}
+
+@keyframes abrir {
+	from {
+		transform: rotateY(180deg);
+		visibility: visible;
+	}
+	to {
+		transform: rotateY(0deg);
+		visibility: visible;
+	}
+}
+
+.cerrar {
+	animation: cerrar 0.5s linear forwards;
+}
+
+@keyframes cerrar {
+	from {
+		transform: rotateY(0deg);
+		visibility: visible;
+	}
+	to {
+		transform: rotateY(180deg);
+		visibility: hidden;
+	}
+}
+
+#notebook_svg {
+	transform: rotateZ(-10deg);
+}
+
+.animar_notebook_svg {
+	animation: escalar 0.5s linear forwards;
+}
+
+@keyframes escalar {
+	from {
+		transform: scale(1) rotateZ(-10deg);
+	}
+	to {
+		transform: scale(2) rotateZ(0deg);
+	}
+}
+
+.desanimar_notebook_svg {
+	animation: des_escalar 0.5s linear forwards;
+}
+
+@keyframes des_escalar {
+	from {
+		transform: scale(2) rotateZ(0deg);
+	}
+	to {
+		transform: scale(1) rotateZ(-10deg);
 	}
 }
